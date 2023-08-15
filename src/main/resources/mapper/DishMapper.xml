@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.xmy.simple.mapper.DishMapper">
+
+    <resultMap id="dishResultMap" type="pers.xmy.simple.entity.Dish">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="represent" property="represent" />
+        <result column="image" property="image" />
+        <result column="price" property="price" />
+        <result column="menu_id" property="menuId" />
+        <result column="sum" property="sum" />
+        <result column="is_collect" property="isCollect" />
+    </resultMap>
+
+    <insert id="insertDish">
+        insert into dish
+        values(#{id}, #{name}, #{represent}, #{image}, #{price}, #{menuId}, #{sum}, #{isCollect})
+    </insert>
+
+</mapper>
